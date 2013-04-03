@@ -31,7 +31,7 @@ def letzte_volfdnr():
 def neue_volfdnr_in_datei_schreiben(neue_volfdnr):
 	# neu ermittelte hoechste volfdnr wird in Datei geschrieben
 	text_file 		= open(datei_volfdnr, "wb")
-	text_file.write(str(neue_volfdnr))
+	text_file.write(str(neue_volfdnr)) 
 	text_file.close()	
 
 def hole_drucksachendict(drucksachenquelle):
