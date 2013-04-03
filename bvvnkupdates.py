@@ -47,10 +47,10 @@ def hole_drucksachendict(drucksachenquelle):
 	drucksachendict = 	{}
 	for entry in table:
 		set={}
-		set["titel"]=					entry.findAll('a')[0].string.encode('utf-8', 'ignore')
-		set["initiator"]=				entry.findAll('td')[3].string.encode('utf-8', 'ignore')
-		set["drucksachenart"]= 			entry.findAll('td')[5].string.encode('utf-8', 'ignore')
-		set["link"]=					entry.a['href'].encode('utf-8', 'ignore')
+		set["titel"]=			entry.findAll('a')[0].string.encode('utf-8', 'ignore')
+		set["initiator"]=		entry.findAll('td')[3].string.encode('utf-8', 'ignore')
+		set["drucksachenart"]= 		entry.findAll('td')[5].string.encode('utf-8', 'ignore')
+		set["link"]=			entry.a['href'].encode('utf-8', 'ignore')
 		drucksachendict[str(entry.td.form.input['value'])]=set
 		alle_volfdnr.append(entry.td.form.input['value'])
 	return drucksachendict
@@ -63,7 +63,7 @@ neue_volfndr 	= []	# alle neuen volfdnr werden zwischengespeichert
 for volfdnr in alledrucksachen.keys():
 	if int(volfdnr)>letzte_volfdnr:	# 
 		neue_volfndr.append(int(volfdnr))
-		tweet_drucksachenart = 	alledrucksachen[volfdnr]["drucksachenart"]
+		tweet_drucksachenart = 		alledrucksachen[volfdnr]["drucksachenart"]
 		tweet_initiator = 		alledrucksachen[volfdnr]["initiator"]
 		tweet_titel = 			alledrucksachen[volfdnr]["titel"].split("&nbsp;")[1]
 		tweet_link = 			alledrucksachen[volfdnr]["link"]
