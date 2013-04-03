@@ -4,10 +4,10 @@
 #from risopen import *
 import urllib2
 from BeautifulSoup import BeautifulSoup
-from twitter import *  #Bibliothek auf https://github.com/sixohsix/twitter 
+from twitter import *  			#Bibliothek auf https://github.com/sixohsix/twitter 
 
 # folgende Schluessel nach Erzeugen einer App auf Twitter erzeugt
-CONSUMER_KEY = 		"XXX"								#consumer
+CONSUMER_KEY = 		"XXX"		#consumer
 CONSUMER_SECRET = 	"XXX"		#consumer secret
 OAUTH_TOKEN  = 		"XXX"		#access token
 OAUTH_SECRET  = 	"XXX"		#access token secret
@@ -24,7 +24,7 @@ def tweetsenden(tweettext):
 def letzte_volfdnr():
 	# hoechste volfdnr, die zuletzt in Datei geschrieben wurde, wird ausgelesen
 	text_file 		= open(datei_volfdnr, "r")
-	letzte_volfdnr 	= text_file.read()
+	letzte_volfdnr 		= text_file.read()
 	text_file.close()
 	return int(letzte_volfdnr)
 
