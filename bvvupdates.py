@@ -56,6 +56,7 @@ def komponiere_tweettext(bezirksschluessel,drucksache):
 	tweet_drucksachenart 	= drucksache["drucksachenart"]
 	tweet_initiator 	= drucksache["initiator"]
 	tweet_titel 		= drucksache["titel"].split("&nbsp;")[1] # noch unschöne Stelle
+	tweet_titel 		= tweet_titel.replace('&ndash;', '-')
 	tweet_link 		= drucksache["link"]
 	# Zusammensetzen des Tweets: 1. Versuch
 	tweet_bezirk = bezirke[bezirksschluessel][2]
