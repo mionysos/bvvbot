@@ -5,7 +5,7 @@
 #-----------
 
 
-mysql_host =   		"localhost"
+mysql_host =   			"localhost"
 mysql_user = 			"XXX"
 mysql_passwd = 			"YYY"
 mysql_db = 				"ZZZ"
