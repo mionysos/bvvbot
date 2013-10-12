@@ -48,10 +48,10 @@ def hole_drucksachendict(drucksachenquelle):
 	for entry in table:
 		try:
 			set={}
-			set["titel"]			= entry.findAll('a')[0].string.encode('utf-8', 'ignore')
-			set["initiator"]		= entry.findAll('td')[3].string.encode('utf-8', 'ignore')
+			set["titel"]		= entry.findAll('a')[0].string.encode('utf-8', 'ignore')
+			set["initiator"]	= entry.findAll('td')[3].string.encode('utf-8', 'ignore')
 			set["drucksachenart"]	= entry.findAll('td')[5].string.encode('utf-8', 'ignore')
-			set["link"]				= entry.a['href'].encode('utf-8', 'ignore')
+			set["link"]		= entry.a['href'].encode('utf-8', 'ignore')
 			drucksachendict[str(entry.td.form.input['value'])] = set
 		except:
 			print "Parse-Fehler bei entry: "+str(entry)
